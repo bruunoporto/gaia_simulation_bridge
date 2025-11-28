@@ -1,0 +1,33 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100  # Hz
+    
+    # Controlador agrupado para todas as juntas de direção
+    position_controllers:
+      type: position_controllers/JointGroupPositionController
+    
+    # Controlador agrupado para todas as rodas
+    velocity_controllers:
+      type: velocity_controllers/JointGroupVelocityController
+    
+    # Joint State Broadcaster
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+# Configuração do controlador de posição (steers)
+position_controllers:
+  ros__parameters:
+    joints:
+      - front_steer_joint
+      - right_steer_joint
+      - rear_steer_joint
+      - left_steer_joint
+
+# Configuração do controlador de velocidade (wheels)
+velocity_controllers:
+  ros__parameters:
+    joints:
+      - front_wheel_joint
+      - right_wheel_joint
+      - rear_wheel_joint
+      - left_wheel_joint
