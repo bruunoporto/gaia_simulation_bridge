@@ -11,3 +11,7 @@ ros2 launch gaia_simulation_bridge gaia_rviz.launch.py control_mode:=differentia
 
 # Modo shim aqui
 #source /home/bruno/xr4000/install/setup.bash && ros2 launch gaia_simulation_bridge gaia_rviz.launch.py control_mode:=shim rviz:=false
+
+#command to test 
+#ros2 topic pub /cmd_vel geometry_msgs/msg/Twist "{angular: {z: 1.0}}" --rate 10
+#ros2 topic pub /cmd_vel geometry_msgs/msg/Twist "{linear: {x: 1.0}}" --rate 10
